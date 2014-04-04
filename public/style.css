@@ -1,0 +1,38 @@
+* {
+padding: 0 0 0 0;
+margin: 0 0 0 0
+}
+
+body {
+max-width: 1200px;
+margin: 0 auto;	
+color: #000000;
+background: #6699CC;
+font-family: Helvetica;
+font-style: normal;
+font-weight: normal;
+}
+
+
+.main
+{
+	height: 90%;
+	width: 90%;
+}
+.hey
+{
+	font-weight: bold;
+	letter-spacing: 10px;
+	text-shadow: -3px 0 black, 0 0px black, 0px 0 black, 0 0px black;
+	color: yellow;
+	font-size:78px;
+}
+
+
+.placeholder
+{
+	color: white;
+	font-size: 34px;
+	text-align: center;
+	margin: 0 auto;
+}
