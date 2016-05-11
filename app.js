@@ -4,11 +4,21 @@ var app = express();
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
-app.use('/public', express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 app.get('/', function(req, res){
   res.render('index.html');
 });
+
+app.get('/about', function(req, res){
+  res.render('about.html');
+});
+
+
+app.get('/projects', function(req, res){
+  res.render('projects.html');
+});
+
 
 
 var port = Number(process.env.PORT || 5000);

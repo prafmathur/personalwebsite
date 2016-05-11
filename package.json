@@ -1,15 +1,22 @@
 {
-  "name": "PersonalWebsite",
+  "name": "prafulwebsite",
   "version": "0.0.0",
-  "description": "",
+  "description": "Praful's Personal Website =========================",
   "main": "index.js",
   "dependencies": {
-    "express": "~3.5.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Praful Mathur",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prafmathur/personalwebsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prafmathur/personalwebsite/issues"
+  },
+  "homepage": "https://github.com/prafmathur/personalwebsite#readme"
 }
