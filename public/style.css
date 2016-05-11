@@ -23,9 +23,6 @@ src: url(JennaSue.ttf);
 }
 
 body {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;	
 	color: #000000;
 	font-family: Helvetica;
 	font-style: normal;
@@ -43,7 +40,7 @@ body {
 }
 
 .menu {
-	width: 400px;
+	max-width: 400px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	font-weight: 100;
@@ -54,7 +51,7 @@ body {
 }
 
 .links {
-	width: 300px;
+	max-width: 300px;
 	margin: 0 auto;
 	font-size: 30px;
 }
@@ -86,16 +83,16 @@ body {
 	font-weight: 500;
 	color: cornflowerblue
 }
-.paralink :hover {
+.paralink a:hover {
 	text-decoration: underline;
 }
-#umich {
+#umich #umich:hover {
 	color: #ffcb05;
 }
-#travel {
+#travel #travel:hover{
 	color:green;
 }
-#microsoft {
+#microsoft #microsoft:hover{
 	color:#f65314
 }
 

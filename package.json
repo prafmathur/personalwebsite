@@ -4,6 +4,8 @@
   "description": "Praful's Personal Website =========================",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
   },
   "devDependencies": {},
   "scripts": {
