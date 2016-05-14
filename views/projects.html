@@ -3,6 +3,7 @@
 	<head>
 		<title>Praful Mathur</title>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 		<link rel="stylesheet" href="normalize.css" type="text/css">
 		<link rel="stylesheet" href="skeleton.css" type="text/css">
@@ -12,12 +13,18 @@
 
 	<body>
 		<div class="container">
+			<div class="backbutton row"> 
+				Projects
+			</div>
 			<div class="projects row">
-				<div class="one-half column">
-					<img id="textjamImg"></img>		
+				<div class="six columns project">
+					<img class="projectImg" src="textjam.png"><h3>TextJam</h3></img>
+					 Textjam is a text message music player and DJ app for the browser. It works using Twilio, Node, and Socket.io		
 				</div>
-				<div class="one-half column">
-					<img id="color8img"></img>
+				<div class="six columns project">
+					<img id="color8img" class="projectImg" src="color8.png"><h3>Color8</h3></img>
+					Color8 is an image processing application that reduces any image to an average 8 colors. 
+					It is a parallelized implementation of k-means clustering on an iPhone GPU, built using Swift and Metal. 
 				</div>
 			</div>
 			<div class="backbutton row" >
