@@ -10,21 +10,39 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 	</head>
 
-
 	<body>
 		<div class="container">
-			<div class="backbutton row"> 
-				Projects
-			</div>
+			<div class="title row">Hi, I'm Praful</div>
 			<div class="projects row">
-				<div class="six columns project">
-					<img class="projectImg" src="textjam.png"><h3>TextJam</h3></img>
-					 Textjam is a text message music player and DJ app for the browser. It works using Twilio, Node, and Socket.io		
+				<div class="c8 six columns project" >
+					<div id="c8img">
+						<img class="projectImg" src="color8.png"></img>
+					</div>
+					<div id="tjdescription" style="display:none">
+						<b class="paralink">What</b> <p> text message music player and DJ app</p>
+						<b class="paralink">Why</b> <p> so anyone can DJ at small parties</p>
+						<b class="paralink">How</b> <p> twilio, node, youtube API, and socket.io</p>
+					</div>
 				</div>
-				<div class="six columns project">
-					<img id="color8img" class="projectImg" src="color8.png"><h3>Color8</h3></img>
-					Color8 is an image processing application that reduces any image to an average 8 colors. 
-					It is a parallelized implementation of k-means clustering on an iPhone GPU, built using Swift and Metal. 
+				<div class="tj six columns project" >
+					<div id="tjimg">
+						<img class="projectImg" src="textjamlogo.png"></img>
+					</div>
+					<div id="c8description" style="display:none">
+						<b class="paralink">What</b> <p> iOS app reducing images to an average 8 colors</p>
+						<b class="paralink">Why</b> <p> class project in Parallel Computing + basic UI</p>
+						<b class="paralink">How</b> <p> k-means clustering on GPU, using Swift and Metal.</p>
+					</div>
+				</div>
+			</div>
+			<div class="projectLinks row">
+				<div class="c8 six columns">
+					<a href="https://itunes.apple.com/us/app/color-8/id1111293239">
+						<img id="c8link" src="appstore.svg"/>&nbsp
+					</a>
+				</div>
+				<div class="tj six columns">
+					<a id="tjlink" href="http://textjam.herokuapp.com/">go to site</a>
 				</div>
 			</div>
 			<div class="backbutton row" >
@@ -32,4 +50,7 @@
 			</div>
 		</div>	
 	</body>
+	
+	<script src="jquery.js"></script>
+	<script src="script.js"></script>
 </html>

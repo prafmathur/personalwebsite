@@ -21,12 +21,11 @@ body {
 	-webkit-text-size-adjust: 100%
 }
 
-
 .title {
 	font-family: jen;
 	font-size: 100px;
-	font-size: 13vw;
-	color:black;
+	font-size: 12vw;
+	color: #111111;
 }
 
 .menu {
@@ -108,7 +107,6 @@ body {
   }
 }
 
-
 #travel #travel:hover{
 	color:green;
 }
@@ -116,14 +114,34 @@ body {
 
 /* Styles for projects page */
 
-.projects {
-}
 
 .project {
-	/*background-color: grey;*/
-	height: 400px;
+	font-size: 17px;
 }
-
 .projectImg{
 	width: 100%;
+	opacity: .6;
+}
+.projectLinks {
+	height: 100px;
+}
+
+.projectImg:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#c8description {
+	text-align: left;
+}
+
+#tjlink {
+	font-size: 25px;
+}
+#tjlink:hover{
+	color:black;
+}
+
+#tjdescription {
+	text-align: right;
 }
