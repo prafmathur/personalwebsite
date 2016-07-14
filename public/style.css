@@ -10,6 +10,8 @@ a :hover {
 @font-face {
 	font-family: jen;
 	src: url(JennaSue.ttf);
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
@@ -123,7 +125,7 @@ body {
 	opacity: .6;
 }
 .projectLinks {
-	height: 100px;
+	height: 20px;
 }
 
 .projectImg:hover {
