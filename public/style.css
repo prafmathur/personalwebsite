@@ -119,31 +119,29 @@ body {
 
 .project {
 	font-size: 17px;
+	overflow: hidden;
+	position: relative;
 }
 .projectImg{
-	width: 100%;
-	opacity: .6;
+	width: 99%;
+	opacity: .2;
+	border: 1px solid black;
 }
 .projectLinks {
 	height: 20px;
 }
-
 .projectImg:hover {
-	opacity: 1;
+	opacity: .2;
 	cursor: pointer;
 }
-
-#c8description {
-	text-align: left;
+.description {
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	top:0;
+	right:0;
+	opacity: 0;
 }
-
-#tjlink {
-	font-size: 25px;
-}
-#tjlink:hover{
-	color:black;
-}
-
-#tjdescription {
-	text-align: right;
+.description:hover {
+	opacity: 1;
 }
