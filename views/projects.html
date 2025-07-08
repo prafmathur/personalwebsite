@@ -1,62 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>Praful Mathur</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-		<link rel="stylesheet" href="normalize.css" type="text/css">
-		<link rel="stylesheet" href="skeleton.css" type="text/css">
-		<link rel="stylesheet" href="style.css" type="text/css">
-	</head>
+  <head>
+    <title>Praful Mathur</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="skeleton.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
 
-	<body>
-		<div class="container">
-			<div class="title row">Hi, I'm Praful</div>
-			<div class="projects row">
-				<div class="c8 six columns project" >
-					<div id="c8img">
-						<img class="projectImg" src="color8.png"></img>
-					</div>
-					<div class="description" id="c8description" style="">
-						<div class="descriptionText">
-							<b class="paralink">What</b> <p> iOS app reducing images to an average 8 colors</p>
-							<b class="paralink">Why</b> <p> class project in Parallel Computing turned filter</p>
-							<b class="paralink">How</b> <p> k-means clustering on GPU, using Swift and Metal.</p>
-						</div>
-					</div>
-					<a href="https://itunes.apple.com/us/app/color-8/id1111293239"></a>
-				</div>
-				<div class="tj six columns project" >
-					<div id="tjimg">
-						<img class="projectImg" src="textjamlogo.png"></img>
-					</div>
-					<div class="description" id="tjdescription" style="">
-						<div class="descriptionText">
-							<b class="paralink">What</b> <p> text message music player and DJ app</p>
-							<b class="paralink">Why</b> <p> so anyone can DJ at small parties</p>
-							<b class="paralink">How</b> <p> twilio, node, youtube API, and socket.io</p>
-						</div>
-					</div>
-					<a id="tjlink" href="http://textjam.herokuapp.com/"></a>
-				</div>
-			</div>
-			<div class="projects row">
-				<div class="fg six columns project">
-					<div id="">
-						<img class="projectImg" src="findmygroup.png"></img>
-					</div>
-					<div class="description" id="" style="">
-						<div class="descriptionText">
-							<b class="paralink">What</b> <p> simple, responsive location based chat website </p>
-							<b class="paralink">Why</b> <p> easily find your group if your phone dies </p>
-							<b class="paralink">How</b> <p> vuejs, node, google maps API</p>
-						</div>
-					</div>
-					<a id="fglink" href="http://findmy.group"></a>
-				</div>
-			</div>
-			<!--<div class="projectLinks row">
+  <body>
+    <div class="container">
+      <div class="title row">Hi, I'm Praful</div>
+      <div class="projects row">
+        <div class="c8 six columns project">
+          <div id="c8img">
+            <img
+              class="projectImg"
+              src="color8.png"
+              alt="Color 8 app screenshot"
+            />
+          </div>
+          <div class="description" id="c8description" style="">
+            <div class="descriptionText">
+              <b class="paralink">What</b>
+              <p>iOS app reducing images to an average 8 colors</p>
+              <b class="paralink">Why</b>
+              <p>class project in Parallel Computing turned filter</p>
+              <b class="paralink">How</b>
+              <p>k-means clustering on GPU, using Swift and Metal.</p>
+            </div>
+          </div>
+          <a href="https://itunes.apple.com/us/app/color-8/id1111293239"></a>
+        </div>
+        <div class="tj six columns project">
+          <div id="tjimg">
+            <img class="projectImg" src="textjamlogo.png" alt="TextJam logo" />
+          </div>
+          <div class="description" id="tjdescription" style="">
+            <div class="descriptionText">
+              <b class="paralink">What</b>
+              <p>text message music player and DJ app</p>
+              <b class="paralink">Why</b>
+              <p>so anyone can DJ at small parties</p>
+              <b class="paralink">How</b>
+              <p>twilio, node, youtube API, and socket.io</p>
+            </div>
+          </div>
+          <a id="tjlink" href="http://textjam.herokuapp.com/"></a>
+        </div>
+      </div>
+      <div class="projects row">
+        <div class="fg six columns project">
+          <div id="">
+            <img
+              class="projectImg"
+              src="findmygroup.png"
+              alt="FindMyGroup app screenshot"
+            />
+          </div>
+          <div class="description" id="" style="">
+            <div class="descriptionText">
+              <b class="paralink">What</b>
+              <p>simple, responsive location based chat website</p>
+              <b class="paralink">Why</b>
+              <p>easily find your group if your phone dies</p>
+              <b class="paralink">How</b>
+              <p>vuejs, node, google maps API</p>
+            </div>
+          </div>
+          <a id="fglink" href="http://findmy.group"></a>
+        </div>
+      </div>
+      <!--<div class="projectLinks row">
 				<div class="c8 four columns">
 					<a href="https://itunes.apple.com/us/app/color-8/id1111293239">
 						<img id="c8link" src="appstore.svg"/>&nbsp
@@ -69,20 +92,25 @@
 					<a id="fglink" href="http://findmy.group">findmy.group</a>
 				</div>
 			</div>-->
-			<div class="backbutton row" >
-				<a href="/">back</a>
-			</div>
-		</div>	
-	</body>
-	
-	<script src="jquery.js"></script>
-	<script src="script.js"></script>
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-80816478-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+      <div class="backbutton row">
+        <a href="/">back</a>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-80816478-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-80816478-1');
+  </script>
 </html>

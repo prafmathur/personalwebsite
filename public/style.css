@@ -1,82 +1,79 @@
 a {
-	text-decoration: none;
-	color: gray;
+  text-decoration: none;
+  color: gray;
 }
 
 a :hover {
-	color: black;
+  color: black;
 }
 
 @font-face {
-	font-family: jen;
-	src: url(JennaSue.ttf);
-	font-weight: normal;
-	font-style: normal;
+  font-family: jen;
+  src: url(JennaSue.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-	color: #000000;
-	font-family: Helvetica;
-	font-style: normal;
-	font-weight: normal;
-	text-align: center;
-	-webkit-text-size-adjust: 100%
+  color: #000000;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  -webkit-text-size-adjust: 100%;
 }
 
-
 .title {
-	font-family: jen;
-	color: #111111;
+  font-family: jen;
+  color: #111111;
 }
 
 .menu {
-	max-width: 400px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-	font-weight: 100;
-	font-size:30px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 30px;
 }
 .menu a:hover {
-	color: black;
+  color: black;
 }
 
 .links {
-	max-width: 300px;
-	margin: 0 auto;
-	font-size: 30px;
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 30px;
 }
 
 .backbutton {
-	margin-top: 30px;
-	font-weight: 100;
-	font-size: 30px;
-
+  margin-top: 30px;
+  font-weight: 100;
+  font-size: 30px;
 }
 .backbutton a:hover {
-	cursor: pointer;
-	color: black;
+  cursor: pointer;
+  color: black;
 }
-
 
 /* Styles for about page */
 
 .paragraph {
-	text-align: left;
-	/*max-width: 800px;*/
-	margin: 0 auto;
-	font-size: 22px;
-	font-weight: 100;
+  text-align: left;
+  /*max-width: 800px;*/
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .paralink {
-	text-decoration: none;
-	font-weight: 500;
-	color: cornflowerblue
+  text-decoration: none;
+  font-weight: 500;
+  color: cornflowerblue;
 }
 .paralink a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
-#umich :hover{
+#umich :hover {
   animation: pulse 1s infinite;
 }
 
@@ -90,83 +87,81 @@ body {
 }
 
 #microsoft :hover {
-	animation: msft 4s infinite;
+  animation: msft 4s infinite;
 }
 
 @keyframes msft {
   0% {
-	color: #ffbb00;
+    color: #ffbb00;
   }
   25% {
-	color: #7cbb00;
+    color: #7cbb00;
   }
   50% {
-	color: #00a1f1; 
+    color: #00a1f1;
   }
   100% {
-	color: #f65314;
+    color: #f65314;
   }
 }
 
-#travel #travel:hover{
-	color:green;
+#travel #travel:hover {
+  color: green;
 }
-
 
 /* Styles for projects page */
 
-
 .project {
-	margin-top: 32px;
-	font-size: 17px;
-	overflow: hidden;
-	position: relative;
+  margin-top: 32px;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
 }
-.projectImg{
-	width: 99%;
-	border: 1px solid black;
+.projectImg {
+  width: 99%;
+  border: 1px solid black;
 }
 .projectLinks {
-	height: 20px;
+  height: 20px;
 }
 .projectImg:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .descriptionText {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
-	.project {
-		font-size: 13px;
-	}
+  .project {
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 800px) {
-	.description {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		opacity: 0;
-		transition: .5s ease;
-		background-color: white;
-	}
-	.description:hover {
-		opacity: 1;
-		cursor: pointer;
-	}
-	.title {
-			font-size: 10vw;
-	}
+  .description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: white;
+  }
+  .description:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 10vw;
+  }
 }
 
 @media (max-width: 800px) {
   .title {
-		font-size: 75px;
+    font-size: 75px;
   }
 }
