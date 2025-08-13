@@ -1,0 +1,7 @@
+node_modules/
+public/jquery.js
+public/JennaSue.ttf
+public/*.png
+public/*.svg
+public/normalize.css
+public/skeleton.css
