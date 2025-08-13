@@ -66,6 +66,10 @@ app.get('/projects', (req, res) => {
   res.sendFile(join(__dirname, 'views', 'projects.html'));
 });
 
+app.get('/writings', (req, res) => {
+  res.sendFile(join(__dirname, 'views', 'writings.html'));
+});
+
 app.get('/latte-art', (req, res) => {
   res.sendFile(join(__dirname, 'views', 'latte-art.html'));
 });
