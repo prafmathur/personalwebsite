@@ -1,6 +1,7 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { readdir } from 'fs/promises';
 import helmet from 'helmet';
 import compression from 'compression';
 import cors from 'cors';
@@ -67,6 +68,40 @@ app.get('/projects', (req, res) => {
 
 app.get('/latte-art', (req, res) => {
   res.sendFile(join(__dirname, 'views', 'latte-art.html'));
+});
+
+// API endpoint to get latte art images
+app.get('/api/latte-art-images', async (req, res) => {
+  try {
+    const imagesDir = join(__dirname, 'public', 'images', 'latte-art');
+    const files = await readdir(imagesDir);
+    
+    // Filter for JPEG files with date format
+    const imageFiles = files
+      .filter(file => file.match(/^\d{4}-\d{2}-\d{2}_latte-art\.jpeg$/))
+      .map(filename => {
+        const dateStr = filename.split('_')[0];
+        const [year, month, day] = dateStr.split('-');
+        const date = new Date(year, month - 1, day);
+        
+        return {
+          filename,
+          date: dateStr,
+          dateObj: date,
+          displayDate: date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })
+        };
+      })
+      .sort((a, b) => b.dateObj - a.dateObj); // Sort newest first
+    
+    res.json(imageFiles);
+  } catch (error) {
+    console.error('Error reading latte art images:', error);
+    res.status(500).json({ error: 'Failed to load images' });
+  }
 });
 
 // Error handling

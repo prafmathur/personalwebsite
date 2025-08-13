@@ -18,34 +18,54 @@
 
   <body>
     <div class="container">
-      <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <h2>July 10, 2024</h2>
-            <img src="/images/latte-art/placeholder1.jpg" alt="Latte art from July 10, 2024">
-            <p>My first attempt at a rosetta.</p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <h2>July 11, 2024</h2>
-            <img src="/images/latte-art/placeholder2.jpg" alt="Latte art from July 11, 2024">
-            <p>Getting a bit better.</p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <h2>July 12, 2024</h2>
-            <img src="/images/latte-art/placeholder3.jpg" alt="Latte art from July 12, 2024">
-            <p>A heart today.</p>
-          </div>
-        </div>
+      <div class="title row">Hi, I'm Praful</div>
+      <div class="latte-gallery" id="latte-gallery">
+        <!-- Images will be loaded dynamically -->
       </div>
       <div class="backbutton row">
         <a href="/about">back</a>
       </div>
     </div>
   </body>
+  
+  <!-- Latte Art Gallery Script -->
+  <script>
+    async function loadLatteArtGallery() {
+      try {
+        const response = await fetch('/api/latte-art-images');
+        const images = await response.json();
+        
+        const gallery = document.getElementById('latte-gallery');
+        gallery.innerHTML = '';
+        
+        images.forEach(image => {
+          const item = document.createElement('div');
+          item.className = 'latte-item';
+          
+          const date = document.createElement('div');
+          date.className = 'latte-date';
+          date.textContent = image.displayDate;
+          
+          const img = document.createElement('img');
+          img.src = `/images/latte-art/${image.filename}`;
+          img.alt = `Latte art from ${image.displayDate}`;
+          
+          item.appendChild(date);
+          item.appendChild(img);
+          gallery.appendChild(item);
+        });
+      } catch (error) {
+        console.error('Failed to load latte art gallery:', error);
+        // Fallback: show error message or keep empty
+        const gallery = document.getElementById('latte-gallery');
+        gallery.innerHTML = '<p>Unable to load images. Please refresh the page.</p>';
+      }
+    }
+    
+    // Load gallery when page loads
+    document.addEventListener('DOMContentLoaded', loadLatteArtGallery);
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script
     async
