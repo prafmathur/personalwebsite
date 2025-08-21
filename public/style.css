@@ -359,6 +359,40 @@ body {
   margin-bottom: 0;
 }
 
+.writings .post-content h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin: 24px 0 12px 0;
+  line-height: 1.4;
+}
+
+.writings .post-content ul,
+.writings .post-content ol {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.writings .post-content ul li,
+.writings .post-content ol li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.writings .post-content ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+.writings .post-content ul li:before {
+  content: "•";
+  color: #666;
+  font-size: 14px;
+  position: absolute;
+  left: -12px;
+  top: 0;
+}
+
 @media (max-width: 768px) {
   .writings {
     margin-top: 30px;
