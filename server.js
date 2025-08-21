@@ -1,7 +1,7 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { readdir } from 'fs/promises';
+import { readdir, readFile } from 'fs/promises';
 import helmet from 'helmet';
 import compression from 'compression';
 import cors from 'cors';
@@ -80,6 +80,38 @@ app.get('/visiting-sf', (req, res) => {
 
 app.get('/pursuit-of-imperfection', (req, res) => {
   res.sendFile(join(__dirname, 'views', 'pursuit-of-imperfection.html'));
+});
+
+// API endpoint to get writings data
+app.get('/api/writings', async (req, res) => {
+  try {
+    const writingsPath = join(__dirname, 'data', 'writings.json');
+    const data = await readFile(writingsPath, 'utf8');
+    const writings = JSON.parse(data);
+    res.json(writings);
+  } catch (error) {
+    console.error('Error reading writings data:', error);
+    res.status(500).json({ error: 'Failed to load writings' });
+  }
+});
+
+// API endpoint to get a specific writing
+app.get('/api/writings/:id', async (req, res) => {
+  try {
+    const writingsPath = join(__dirname, 'data', 'writings.json');
+    const data = await readFile(writingsPath, 'utf8');
+    const writings = JSON.parse(data);
+    const writing = writings.find(w => w.id === req.params.id);
+    
+    if (!writing) {
+      return res.status(404).json({ error: 'Writing not found' });
+    }
+    
+    res.json(writing);
+  } catch (error) {
+    console.error('Error reading writing data:', error);
+    res.status(500).json({ error: 'Failed to load writing' });
+  }
 });
 
 // API endpoint to get latte art images
