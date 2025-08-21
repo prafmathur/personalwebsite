@@ -74,6 +74,14 @@ app.get('/latte-art', (req, res) => {
   res.sendFile(join(__dirname, 'views', 'latte-art.html'));
 });
 
+app.get('/visiting-sf', (req, res) => {
+  res.sendFile(join(__dirname, 'views', 'visiting-sf.html'));
+});
+
+app.get('/pursuit-of-imperfection', (req, res) => {
+  res.sendFile(join(__dirname, 'views', 'pursuit-of-imperfection.html'));
+});
+
 // API endpoint to get latte art images
 app.get('/api/latte-art-images', async (req, res) => {
   try {

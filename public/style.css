@@ -344,6 +344,15 @@ body {
   line-height: 1.3;
 }
 
+.writings .post-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.writings .post-title a:hover {
+  color: #000;
+}
+
 .writings .post-content {
   font-size: 18px;
   font-weight: 300;
@@ -391,6 +400,20 @@ body {
   position: absolute;
   left: -12px;
   top: 0;
+}
+
+.writings .post-content .note {
+  font-size: 16px;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.writings .post-content .small-note {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 14px;
 }
 
 @media (max-width: 768px) {
