@@ -5,6 +5,15 @@ import { readdir, readFile } from 'fs/promises';
 import helmet from 'helmet';
 import compression from 'compression';
 import cors from 'cors';
+import { marked } from 'marked';
+
+// Configure marked to preserve HTML and handle styling
+marked.setOptions({
+  breaks: true,        // Convert \n to <br>
+  gfm: true,          // GitHub Flavored Markdown
+  sanitize: false,    // Allow raw HTML (like your class="small-note")
+  smartypants: true   // Smart quotes and dashes
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -85,9 +94,25 @@ app.get('/pursuit-of-imperfection', (req, res) => {
 // API endpoint to get writings data
 app.get('/api/writings', async (req, res) => {
   try {
-    const writingsPath = join(__dirname, 'data', 'writings.json');
-    const data = await readFile(writingsPath, 'utf8');
-    const writings = JSON.parse(data);
+    const metaPath = join(__dirname, 'data', 'writings-meta.json');
+    const metaData = await readFile(metaPath, 'utf8');
+    const writingsMeta = JSON.parse(metaData);
+    
+    const writings = await Promise.all(
+      writingsMeta.map(async (meta) => {
+        const contentPath = join(__dirname, 'data', 'writings', meta.file);
+        const markdown = await readFile(contentPath, 'utf8');
+        const html = marked(markdown);
+        
+        return {
+          id: meta.id,
+          title: meta.title,
+          date: meta.date,
+          content: html
+        };
+      })
+    );
+    
     res.json(writings);
   } catch (error) {
     console.error('Error reading writings data:', error);
@@ -98,14 +123,25 @@ app.get('/api/writings', async (req, res) => {
 // API endpoint to get a specific writing
 app.get('/api/writings/:id', async (req, res) => {
   try {
-    const writingsPath = join(__dirname, 'data', 'writings.json');
-    const data = await readFile(writingsPath, 'utf8');
-    const writings = JSON.parse(data);
-    const writing = writings.find(w => w.id === req.params.id);
+    const metaPath = join(__dirname, 'data', 'writings-meta.json');
+    const metaData = await readFile(metaPath, 'utf8');
+    const writingsMeta = JSON.parse(metaData);
+    const meta = writingsMeta.find(w => w.id === req.params.id);
     
-    if (!writing) {
+    if (!meta) {
       return res.status(404).json({ error: 'Writing not found' });
     }
+    
+    const contentPath = join(__dirname, 'data', 'writings', meta.file);
+    const markdown = await readFile(contentPath, 'utf8');
+    const html = marked(markdown);
+    
+    const writing = {
+      id: meta.id,
+      title: meta.title,
+      date: meta.date,
+      content: html
+    };
     
     res.json(writing);
   } catch (error) {
